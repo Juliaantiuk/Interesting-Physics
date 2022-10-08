@@ -1,0 +1,570 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+body{
+    background-image: url("./ssm/IMG_3258.WEBP");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.m-orbit{
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgb(117, 100, 100);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateX(60deg);
+}
+
+.sun{
+    width: 200px;
+    height: 200px;
+    background-image: url("./ssm/sun.png");
+    border-radius: 50%;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transform: rotateX(300deg);
+}
+
+.mercury{
+    width: 40px;
+    height: 70px;
+    border-radius: 50%;
+    background-image: url("./ssm/mercury.png");
+    background-size: 40px 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* margin-left: 100px !important; */
+    margin: auto;
+    transform: rotateZ(0deg) translate(150px) rotate(0deg);
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+.mercury::after{
+    content: "";
+    background-image: linear-gradient(to right, #311b1bd0, #392121d0, #3b2525d0, #422c2cd0, #4e3434d0, #4d3434d0, #5b3b3bd0, #594141d0, #614545d0, #684848d0, #805454d0, #744b4bd0);
+    background-size: 100% 100%;
+    opacity: 0.7;
+    background-position: 0%;
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    animation-name: shadow;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+@keyframes shadow {
+    0%{
+        background-size: 150% 100%;
+        background-position: 0%;
+    }
+    25%{
+        background-size: 300% 100%;
+        background-position: 0%;
+    }
+    50%{
+        background-size: 200% 100%;
+        background-position: 90%;
+    }
+    75%{
+        background-size: 300% 100%;
+        background-position: 50%;
+    }
+    100%{
+        background-size: 150% 100%;
+        background-position: 0%;
+    }
+}
+
+
+
+@keyframes spin {
+    100%{
+        transform: rotateZ(-360deg) translate(150px) rotate(360deg);
+    }
+}
+
+
+.v-orbit{
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgb(117, 100, 100);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateX(60deg);
+}
+
+.venus{
+    width: 45px;
+    height: 75px;
+    border-radius: 50%;
+    background-image: url("./ssm/venus.png");
+    background-size: 45px 75px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* margin-left: 100px !important; */
+    margin: auto;
+    transform: rotateZ(0deg) translate(200px) rotate(0deg);
+    animation-name: v-spin;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+.venus::after{
+    content: "";
+    background-image: linear-gradient(to right, #906008d0, #ab7613d0, #ba7f32d0, #b46c1ed0, #ce911fd0, #ce7a20d0, #c78125d0, #da7b15d0, #dd8219d0, #da911cd0, #db9c0ad0, #eb9d0dd0);
+    background-size: 100% 100%;
+    opacity: 0.7;
+    background-position: 0%;
+    width: 45px;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    animation-name: shadow;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+@keyframes v-spin {
+    100%{
+        transform: rotateZ(-360deg) translate(200px) rotate(360deg);
+    }
+}
+
+
+.e-orbit{
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgb(117, 100, 100);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateX(60deg);
+}
+
+.earth{
+    width: 55px;
+    height: 85px;
+    border-radius: 50%;
+    background-image: url("./ssm/earth.png");
+    background-size: 55px 85px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* margin-left: 100px !important; */
+    margin: auto;
+    transform: rotateZ(0deg) translate(250px) rotate(0deg);
+    animation-name: e-spin;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+@keyframes e-spin {
+    100%{
+        transform: rotateZ(-360deg) translate(250px) rotate(360deg);
+    }
+}
+/* 
+.earth::after{
+    content: "";
+    background-image: linear-gradient(to right, #1a014ed0, #150356d0, #0c0251d0, #23025ad0, #21046fd0, #210480d0, #1b0596d0, #230394d0, #220386d0, #4505add0, #2e05c3d0, #230debd0);
+    background-size: 100% 100%;
+    background-position: 0%;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    animation-name: shadow;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+} */
+
+
+.ma-orbit{
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgb(117, 100, 100);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateX(60deg);
+}
+
+.mars{
+    width: 50px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url("./ssm/mars.png");
+    background-size: 50px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateZ(0deg) translate(300px) rotate(0deg);
+    animation-name: ma-spin;
+    animation-duration: 6.5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+@keyframes ma-spin {
+    100%{
+        transform: rotateZ(-360deg) translate(300px) rotate(360deg);
+    }
+}
+
+.mars::after{
+    content: "";
+    background-image: linear-gradient(to right, #4e0101d0, #560303d0, #510202d0, #5a0202d0, #6f0404d0, #800404d0, #960505d0, #940303d0, #860303d0, #ad0505d0, #c30505d0, #eb0d0dd0);
+    opacity: 0.7;
+    background-size: 100% 100%;
+    background-position: 0%;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    animation-name: shadow;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+} 
+
+.j-orbit{
+    width: 750px;
+    height: 750px;
+    border: 1px solid rgb(117, 100, 100);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateX(60deg);
+}
+
+.jupiter{
+    width: 75px;
+    height: 105px;
+    border-radius: 50%;
+    background-image: url("./ssm/jupiter.png");
+    background-size: 75px 105px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateZ(0deg) translate(375px) rotate(0deg);
+    animation-name: j-spin;
+    animation-duration: 8.5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+@keyframes j-spin {
+    100%{
+        transform: rotateZ(-360deg) translate(375px) rotate(360deg);
+    }
+}
+
+.jupiter::after{
+    content: "";
+    background-image: linear-gradient(to right, #b0965fd0, #cdb273d0, #c3b05dd0, #dec66dd0, #f4de90d0, #e5d272d0, #ebde89d0, #eee57fd0, #f0e781d0, #f4f2a2d0, #fcf0b6d0, #f8f2b0d0);
+    opacity: 0.4;
+    background-size: 100% 100%;
+    background-position: 0%;
+    width: 75px;
+    height: 105px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    animation-name: shadow;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+} 
+
+.s-orbit{
+    width: 900px;
+    height: 900px;
+    border: 1px solid rgb(117, 100, 100);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateX(60deg);
+}
+
+.saturn{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("./ssm/saturn.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateZ(0deg) translate(450px) rotate(0deg);
+    animation-name: s-spin;
+    animation-duration: 7.6s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+@keyframes s-spin {
+    100%{
+        transform: rotateZ(-360deg) translate(450px) rotate(360deg);
+    }
+}
+
+
+.u-orbit{
+    width: 1050px;
+    height: 1050px;
+    border: 1px solid rgb(117, 100, 100);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateX(60deg);
+}
+
+
+.uran{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-image: url("./ssm/uranus.png");
+    background-size: 85px 85px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateZ(0deg) translate(530px) rotate(0deg);
+    animation-name: u-spin;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+@keyframes u-spin {
+    100%{
+        transform: rotateZ(-360deg) translate(530px) rotate(360deg);
+    }
+}
+
+.uran::after{
+    content: "";
+    background-image: linear-gradient(to right, #1a014ed0, #150356d0, #0c0251d0, #23025ad0, #21046fd0, #210480d0, #1b0596d0, #230394d0, #220386d0, #4505add0, #2e05c3d0, #230debd0);
+    background-size: 100% 100%;
+    opacity: 0.3;
+    background-position: 0%;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    animation-name: shadow;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+
+  
+.n-orbit{
+    width: 1143px;
+    height: 1143px;
+    border: 1px solid rgb(117, 100, 100);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateX(60deg);
+}
+
+
+.neptune{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-image: url("./ssm/neptune.png");
+    background-size: 85px 85px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotateZ(0deg) translate(565px) rotate(0deg);
+    animation-name: n-spin;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+@keyframes n-spin {
+    100%{
+        transform: rotateZ(-360deg) translate(565px) rotate(360deg);
+    }
+}
+
+.neptune::after{
+    content: "";
+    background-image: linear-gradient(to right, #1a014ed0, #150356d0, #0c0251d0, #23025ad0, #21046fd0, #210480d0, #1b0596d0, #230394d0, #220386d0, #4505add0, #2e05c3d0, #230debd0);
+    background-size: 100% 100%;
+    opacity: 0.3;
+    background-position: 0%;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    animation-name: shadow;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+.comet{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    /* opacity: 0.5; */
+    background-image: url(./ssm/comet.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.1s;
+}

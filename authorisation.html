@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="authorisation.css">
+    <title>Авторизація</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+      <!--Вітальне вікно-->
+
+        <div class="greet">
+
+            <h2>Вітаємо!</h2>
+            <p>Увійти можуть лише зареєстровані користувачі</p>
+            <a role="button" class="btn btn-warning" href="index.html">Вийти</a>
+            <button onclick="showRegForm()" class="btn btn-info">Зареєструватися</button>
+            <button onclick="logInMyAcc()" class="btn btn-primary">Вже маю акаунт</button>
+
+        </div>
+
+        <!--Реєстрація-->
+  
+        <div class="registration">
+          <form action="">
+            <i class='bx bx-envelope' ></i>
+            <input class="inp reg-inp" type="email" placeholder="Введіть e-mail">
+            <i class='bx bx-user'></i>
+            <input class="inp reg-inp" type="text" placeholder="Введіть логін">
+            <i class='bx bx-lock-alt '></i>
+            <input class="inp pass reg-inp" type="password" placeholder="Введіть пароль">
+            <i class='bx bx-lock-alt'></i>
+            <input class="inp confpass reg-inp" type="password" placeholder="Підтвердьте пароль"> <br>
+            <button  type="button" class="btn btn-success sub-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Завершити реєстрацію
+            </button>
+
+
+          </form>
+
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Дякуємо!</h5>
+                  
+                </div>
+                <div class="modal-body">
+                  Лінк на ваш особистий кабінет ми надішлемо поштою.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!--Вхід на свій акаунт-->
+
+        <div class="log-in">
+          <form action="">
+            <i class='bx bxs-user'></i>
+            <input type="text" placeholder="Введіть логін">
+            <i class='bx bxs-lock-alt'></i>
+            <input type="password" placeholder="Введіть пароль"> <br>
+            <button onclick="" class="btn btn-success sub-btn">Увійти</button>
+          </form>
+        </div>
+
+
+      
+      
+       </div>
+          
+
+        
+
+    </div>
+
+    
+    
+     
+
+
+     <script src="jquery.js"></script>
+     <script src="authorisation.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+</html>
